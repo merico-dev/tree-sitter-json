@@ -3,7 +3,7 @@ module.exports = grammar({
 
   extras: $ => [
     /\s/,
-    $.comment,
+    // $.comment,
   ],
 
   supertypes: $ => [
@@ -94,14 +94,14 @@ module.exports = grammar({
 
     null: $ => "null",
 
-    comment: $ => token(choice(
-      seq('//', /.*/),
-      seq(
-        '/*',
-        /[^*]*\*+([^/*][^*]*\*+)*/,
-        '/'
-      )
-    )),
+    // comment: $ => token(choice(
+    //   seq('//', /.*/),
+    //   seq(
+    //     '/*',
+    //     /[^*]*\*+([^/*][^*]*\*+)*/,
+    //     '/'
+    //   )
+    // )),
   }
 });
 
